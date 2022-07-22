@@ -2,7 +2,7 @@ package com.pixeon.pixeonchallenge.util;
 
 import java.util.InputMismatchException;
 
-public class ValidaCNPJ {
+public class ValidateCNPJ {
 
 	public static boolean isCNPJ(String CNPJ) {
 		
