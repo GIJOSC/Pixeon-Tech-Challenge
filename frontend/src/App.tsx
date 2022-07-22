@@ -1,12 +1,13 @@
+import Header from "./components/header";
 
 
 function App() {
-  return(
-
-    <h1>Pixeon Tech Challenge</h1>
-
-  )
- 
+  return (
+    <>
+      <Header />
+      
+    </>
+  );
 }
 
-export default App
+export default App;
