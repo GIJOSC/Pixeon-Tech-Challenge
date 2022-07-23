@@ -24,20 +24,17 @@ public class Exam implements Serializable {
 	@Column(nullable = false)
 	private String HealthcareInstitution;
 	
-	@Column(nullable = false)
+	@Column(nullable = false)	
 	private String PatientName;
 	
-	@Column(nullable = false)
-	private Long PatientAge;
-	
-	@Column(nullable = false)
+	@Column(nullable = false)	
 	private String PatientGender;
 	
 	@Column(nullable = false)
-	private String PhysicianName;
+	private String Physician_Name;
 	
 	@Column(nullable = false)
-	private Long PhysicianCRM;
+	private String PhysicianCRM;
 	
 	@Column(nullable = false)
 	private String ProcedureName;
@@ -74,14 +71,6 @@ public class Exam implements Serializable {
 		PatientName = patientName;
 	}
 
-	public Long getPatientAge() {
-		return PatientAge;
-	}
-
-	public void setPatientAge(Long patientAge) {
-		PatientAge = patientAge;
-	}
-
 	public String getPatientGender() {
 		return PatientGender;
 	}
@@ -90,19 +79,19 @@ public class Exam implements Serializable {
 		PatientGender = patientGender;
 	}
 
-	public String getPhysicianName() {
-		return PhysicianName;
+	public String getPhysician_Name() {
+		return Physician_Name;
 	}
 
-	public void setPhysicianName(String physicianName) {
-		PhysicianName = physicianName;
+	public void setPhysician_Name(String physician_Name) {
+		Physician_Name = physician_Name;
 	}
 
-	public Long getPhysicianCRM() {
+	public String getPhysicianCRM() {
 		return PhysicianCRM;
 	}
 
-	public void setPhysicianCRM(Long physicianCRM) {
+	public void setPhysicianCRM(String physicianCRM) {
 		PhysicianCRM = physicianCRM;
 	}
 
@@ -114,9 +103,14 @@ public class Exam implements Serializable {
 		ProcedureName = procedureName;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(HealthcareInstitution, PatientGender, PatientName, PhysicianCRM, Physician_Name,
+				ProcedureName, id);
 	}
 
 	@Override
@@ -128,14 +122,18 @@ public class Exam implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Exam other = (Exam) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(HealthcareInstitution, other.HealthcareInstitution)
+				&& Objects.equals(PatientGender, other.PatientGender) && Objects.equals(PatientName, other.PatientName)
+				&& Objects.equals(PhysicianCRM, other.PhysicianCRM)
+				&& Objects.equals(Physician_Name, other.Physician_Name)
+				&& Objects.equals(ProcedureName, other.ProcedureName) && Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
 		return "Exam [id=" + id + ", HealthcareInstitution=" + HealthcareInstitution + ", PatientName=" + PatientName
-				+ ", PatientAge=" + PatientAge + ", PatientGender=" + PatientGender + ", PhysicianName=" + PhysicianName
-				+ ", PhysicianCRM=" + PhysicianCRM + ", ProcedureName=" + ProcedureName + "]";
-	}	
+				+ ", PatientGender=" + PatientGender + ", Physician_Name=" + Physician_Name + ", PhysicianCRM="
+				+ PhysicianCRM + ", ProcedureName=" + ProcedureName + "]";
+	}
 
 }

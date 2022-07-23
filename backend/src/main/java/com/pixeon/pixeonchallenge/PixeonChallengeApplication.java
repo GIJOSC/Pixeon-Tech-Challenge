@@ -15,14 +15,7 @@ public class PixeonChallengeApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		
-		Exam ex1 = new Exam(1l, "Glicose");
-		Exam ex2 = new Exam(2L, "Sangue");
-		
-		ex1.setProcedureName("blood collection");
-		
-		System.out.println("ID = " + ex2.getId());
-		
+
 	}
 
 }
