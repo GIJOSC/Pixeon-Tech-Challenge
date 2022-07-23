@@ -15,7 +15,7 @@ public class ExamService {
 	private ExamRepository repository;
 	
 	public List<Exam> findExam() {
-		return repository.findAllById(null);
+		return repository.findAll();
 		
 	}
 

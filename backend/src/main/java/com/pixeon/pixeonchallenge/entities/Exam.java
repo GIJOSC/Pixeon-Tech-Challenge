@@ -1,7 +1,9 @@
 package com.pixeon.pixeonchallenge.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,22 +12,42 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_exam")
-public class Exam {
+public class Exam implements Serializable {
 	
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String HealthcareInstitution;	
+	@Column(nullable = false)
+	private String HealthcareInstitution;
+	
+	@Column(nullable = false)
 	private String PatientName;
-	private Integer PatientAge;
+	
+	@Column(nullable = false)
+	private Long PatientAge;
+	
+	@Column(nullable = false)
 	private String PatientGender;
+	
+	@Column(nullable = false)
 	private String PhysicianName;
-	private Integer PhysicianCRM;
-	private Integer ProcedureName;
+	
+	@Column(nullable = false)
+	private Long PhysicianCRM;
+	
+	@Column(nullable = false)
+	private String ProcedureName;
 	
 	public Exam() {
-		super();
+		
+	}
+
+	public Exam(long l, String string) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public Long getId() {
@@ -52,11 +74,11 @@ public class Exam {
 		PatientName = patientName;
 	}
 
-	public Integer getPatientAge() {
+	public Long getPatientAge() {
 		return PatientAge;
 	}
 
-	public void setPatientAge(Integer patientAge) {
+	public void setPatientAge(Long patientAge) {
 		PatientAge = patientAge;
 	}
 
@@ -76,19 +98,19 @@ public class Exam {
 		PhysicianName = physicianName;
 	}
 
-	public Integer getPhysicianCRM() {
+	public Long getPhysicianCRM() {
 		return PhysicianCRM;
 	}
 
-	public void setPhysicianCRM(Integer physicianCRM) {
+	public void setPhysicianCRM(Long physicianCRM) {
 		PhysicianCRM = physicianCRM;
 	}
 
-	public Integer getProcedureName() {
+	public String getProcedureName() {
 		return ProcedureName;
 	}
 
-	public void setProcedureName(Integer procedureName) {
+	public void setProcedureName(String procedureName) {
 		ProcedureName = procedureName;
 	}
 

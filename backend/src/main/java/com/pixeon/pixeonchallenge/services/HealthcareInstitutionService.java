@@ -5,20 +5,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pixeon.pixeonchallenge.entities.Exam;
+import com.pixeon.pixeonchallenge.entities.HealthcareInstitution;
+import com.pixeon.pixeonchallenge.repositories.HeathcareInstitutionRepository;
 
 @Service
-public class HealthcareInstitutionService<HealthcareIntitutionRepository> {
+public class HealthcareInstitutionService {
 	
 	@Autowired
-	private HealthcareIntitutionRepository repository;
+	private HeathcareInstitutionRepository repository;
 	
-	public List<Exam> findExam() {
-		return null;		
-	}
-	
-	public List<Exam> findById() {
-		return null;
+	public List<HealthcareInstitution> findAll() {
+		return repository.findAll();	
 	}
 
 }

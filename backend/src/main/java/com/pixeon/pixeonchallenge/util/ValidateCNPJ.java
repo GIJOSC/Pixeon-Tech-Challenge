@@ -7,6 +7,7 @@ public class ValidateCNPJ {
 	public static boolean isCNPJ(String CNPJ) {
 		
 		// considera-se erro CNPJ's formados por uma sequencia de numeros iguais
+		
 		if (CNPJ.equals("00000000000000") || CNPJ.equals("11111111111111") || CNPJ.equals("22222222222222")
 				|| CNPJ.equals("33333333333333") || CNPJ.equals("44444444444444") || CNPJ.equals("55555555555555")
 				|| CNPJ.equals("66666666666666") || CNPJ.equals("77777777777777") || CNPJ.equals("88888888888888")
@@ -17,8 +18,11 @@ public class ValidateCNPJ {
 		int sm, i, r, num, peso;
 
 		// "try" - protege o código para eventuais erros de conversao de tipo (int)
+		
 		try {
+			
 			// Calculo do 1o. Digito Verificador
+			
 			sm = 0;
 			peso = 2;
 			for (i = 11; i >= 0; i--) {
