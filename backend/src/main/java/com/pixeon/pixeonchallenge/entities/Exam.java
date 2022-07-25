@@ -31,7 +31,7 @@ public class Exam implements Serializable {
 	private String PatientGender;
 	
 	@Column(nullable = false)
-	private String Physician_Name;
+	private String PhysicianName;
 	
 	@Column(nullable = false)
 	private String PhysicianCRM;
@@ -80,11 +80,11 @@ public class Exam implements Serializable {
 	}
 
 	public String getPhysician_Name() {
-		return Physician_Name;
+		return PhysicianName;
 	}
 
 	public void setPhysician_Name(String physician_Name) {
-		Physician_Name = physician_Name;
+		PhysicianName = physician_Name;
 	}
 
 	public String getPhysicianCRM() {
@@ -109,7 +109,7 @@ public class Exam implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(HealthcareInstitution, PatientGender, PatientName, PhysicianCRM, Physician_Name,
+		return Objects.hash(HealthcareInstitution, PatientGender, PatientName, PhysicianCRM, PhysicianName,
 				ProcedureName, id);
 	}
 
@@ -125,14 +125,14 @@ public class Exam implements Serializable {
 		return Objects.equals(HealthcareInstitution, other.HealthcareInstitution)
 				&& Objects.equals(PatientGender, other.PatientGender) && Objects.equals(PatientName, other.PatientName)
 				&& Objects.equals(PhysicianCRM, other.PhysicianCRM)
-				&& Objects.equals(Physician_Name, other.Physician_Name)
+				&& Objects.equals(PhysicianName, other.PhysicianName)
 				&& Objects.equals(ProcedureName, other.ProcedureName) && Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
 		return "Exam [id=" + id + ", HealthcareInstitution=" + HealthcareInstitution + ", PatientName=" + PatientName
-				+ ", PatientGender=" + PatientGender + ", Physician_Name=" + Physician_Name + ", PhysicianCRM="
+				+ ", PatientGender=" + PatientGender + ", Physician_Name=" + PhysicianName + ", PhysicianCRM="
 				+ PhysicianCRM + ", ProcedureName=" + ProcedureName + "]";
 	}
 

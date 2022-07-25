@@ -17,11 +17,7 @@ const Footer = () => {
         <li><a href='#contact'>Contact</a></li>
       </ul>
 
-      <div className="footer__socials">
-        <a href='https://www.facebook.com/Pixeon'><FaFacebookF/></a>
-        <a href='https://www.instagram.com/somospixeon/'><FiInstagram/></a>
-        <a href='https://twitter.com/pixeon'><IoLogoTwitter/></a>
-      </div>
+  
 
       <div className="footer__copyright">
         <small>&copy; Gesiel Neves. All rights reserved.</small>
